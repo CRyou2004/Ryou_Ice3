@@ -66,7 +66,8 @@ architecture top_basys3_arch of top_basys3 is
         end component ripple_adder;
 
     -- declare any signals you will need	
-  
+  signal A,B, S: std_logic_vector(3 downto 0);
+  signal Cin, Cout: std_logic;
 begin
 	-- PORT MAPS --------------------
    ripple_adder_0: ripple_adder

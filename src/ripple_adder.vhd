@@ -6,11 +6,13 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 entity ripple_adder is
-    Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
+    Port (
+           A : in STD_LOGIC_VECTOR (3 downto 0);
            B : in STD_LOGIC_VECTOR (3 downto 0);
            Cin : in STD_LOGIC;
            S : out STD_LOGIC_VECTOR (3 downto 0);
-           Cout : out STD_LOGIC);
+           Cout : out STD_LOGIC
+           );
 end ripple_adder;
 
 architecture Behavioral of ripple_adder is
@@ -61,4 +63,5 @@ begin
         S     => S(3),
         Cout  => w_carry(3)
     );
+    Cout <= w_carry(3);
 end Behavioral;
